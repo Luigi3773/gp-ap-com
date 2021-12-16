@@ -23,8 +23,8 @@ Johny = sprites.create(img`
     . . . . . f f f f f f . . . . . 
     . . . . . f f . . f f . . . . . 
     `, SpriteKind.Player)
-Johny.setPosition(14, 150)
-scene.cameraFollowSprite(Johny)
+Johny.setPosition(15, 96)
+Johny.setStayInScreen(true)
 controller.moveSprite(Johny, 100, controller.dx())
 Johny.ay = 200
 animation.runImageAnimation(
@@ -101,7 +101,7 @@ Johny,
 100,
 true
 )
-game.onUpdateInterval(2000, function () {
+game.onUpdateInterval(5000, function () {
     projectile = sprites.createProjectileFromSide(img`
         . . f f f . . . . . . . . f f f 
         . f f c c . . . . . . f c b b c 
@@ -119,6 +119,5 @@ game.onUpdateInterval(2000, function () {
         . f b b b b b b b b c f . . . . 
         . . f b b b b b b c f . . . . . 
         . . . f f f f f f f . . . . . . 
-        `, -50, 0)
-    projectile.setPosition(100, 160)
+        `, -100, 0)
 })
