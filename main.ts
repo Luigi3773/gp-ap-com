@@ -120,4 +120,5 @@ game.onUpdateInterval(5000, function () {
         . . f b b b b b b c f . . . . . 
         . . . f f f f f f f . . . . . . 
         `, -100, 0)
+    projectile.setPosition(randint(0, 10), randint(0, 10))
 })
